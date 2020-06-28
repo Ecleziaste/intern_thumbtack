@@ -1,0 +1,23 @@
+{
+  "name": "intern.thumbtack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ecleziaste/intern.thumbtack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ecleziaste/intern.thumbtack/issues"
+  },
+  "homepage": "https://github.com/Ecleziaste/intern.thumbtack#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
