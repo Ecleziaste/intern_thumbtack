@@ -24,7 +24,7 @@
     /*font-family: 'PFSquareSansProRegular';*/
 /*}*/
 
-#logo{
+.logo{
     position: static;
     float: left;
     height: 54px;
@@ -33,65 +33,102 @@
     /*background-image: src="images/logo_new.png" ;*/
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .navigate{
+    height:40x;
+    width: 320px;
     float: right;
     font-size: 18px;
     line-height: 27px;
-    margin: 9px 0px 0px 0px;
+    margin: 9px 9px 0 0;
     text-align: right;
     text-decoration: none solid rgb(193, 216, 47);
-    font-family: 'PFSquareSansProRegular';
+    display: flex;
+    /*flex-flow: row wrap;*/
+    justify-content: space-between;
+    /*justify-content: space-between;*/
+    /*align-content: space-between;*/
+    /*font-family: 'PFSquareSansProRegular';*/
 
     /*box-sizing: border-box;*/
 }
 
 .list {
-    margin:0px 18px 0px 0px;
+    margin:0 18px 0 0;
 }
 
 .aim:hover {
     border-bottom: 2px solid #C1D82F;
+    color: #C1D82F;
+    cursor: pointer
 }
 
-#mainTitle {
-    padding: 80px 15px 0px 15px;
+.mainTitle {
+    padding: 80px 15px 0 15px;
     box-sizing: border-box;
-    font: src="fonts/PFSquareSansProRegular.ttf" ;
+    /*font: src="fonts/PFSquareSansProRegular.ttf" ;*/
 }
 
+.firstTitle {
+    font-size: 64px;
+}
 
-#secondTitle {
-    margin: 70px 0px 14px 0px;
+.secondTitle {
+    margin: 50px 0 14px 0;
     line-height: 70px;
 }
 
-#thirdTitle {
-    margin-bottom: 68px;
+.thirdTitle {
+    /*margin-bottom: 68px;*/
+    margin-bottom: 48px;
     line-height: 30px;
 }
 
 .register {
     font-size: 24px;
-    font-weight: bold;
-
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    padding: 12px 24px 12px 24px;
 }
 
 .register:hover{
     border: 2px solid #C1D82F;
     line-height: 30px;
+    color: #C1D82F;
+    cursor: pointer
 }
 
-#firstTitle {
-    font-size: 64px;
-
-}
-
-#recomendation {
+.recomendation {
     line-height: 22px;
     font-size: 20px;
-    margin: 20px 0px 10px 0px;
+    margin: 60px 0 10px 0;
 }
 
 .description {
     text-align: center;
+}
+
+.omsk {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.dateDecoration {
+    float: left;
+    min-width: 70px;
+    min-height: 70px;
+    padding: .35em;
+    border: 2px solid #e74c3c;
+    border-radius: 6px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.firstCity {
+    order: 1;
+    flex-grow: 4;
 }
