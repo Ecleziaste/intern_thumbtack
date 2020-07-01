@@ -92,6 +92,10 @@
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
     padding: 12px 24px 12px 24px;
+    margin-bottom: 4px;
+    height: 40px;
+    /*border: 2px solid transparent;*/
+    /*box-sizing: border-box;*/
 }
 
 .register:hover{
@@ -101,34 +105,133 @@
     cursor: pointer
 }
 
-.recomendation {
+/*ховер двигает нижний элемент*/
+
+.recommendation__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 55px 0 10px 0;
+}
+
+.recommendation__text {
     line-height: 22px;
     font-size: 20px;
-    margin: 60px 0 10px 0;
+    /*margin: 55px 0 10px 0;*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
 }
 
 .description {
     text-align: center;
+    line-height: 27px;
+    font-size:16px;
+    padding-top: 64px;
 }
 
-.omsk {
+.description__header {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+/*.city {*/
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+    /*justify-content: center;*/
+
+.city__header {
+     /*text-align: center;*/
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     font-size: 25px;
+
+ }
+
+.city__wrapper{
+    display: flex;
+    justify-content: center;
+    /*justify-content: space-evenly;*/
+    flex-flow: row wrap;
+
+}
+
+
+.date {
+    padding-top: 30px;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+
 }
 
-.dateDecoration {
-    float: left;
-    min-width: 70px;
-    min-height: 70px;
-    padding: .35em;
+.date__box__colored {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    width: 46%;
+    background-color: rgb(247, 238, 118);
+    justify-content: space-evenly;
+/*rgb(255, 255, 219)*/
+
+}
+
+.date__box {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    width: 46%;
+    justify-content: space-around;
+    /*width: 375px;*/
+
+}
+
+.date__icon {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: space-evenly;
+    margin: auto 0;
+    flex-flow: column wrap;
+    /*padding: .35em;*/
     border: 2px solid #e74c3c;
     border-radius: 6px;
-    line-height: 1.25;
-    text-align: center;
+
 }
 
-.firstCity {
-    order: 1;
-    flex-grow: 4;
+.date__number {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    /*flex-flow: column wrap;*/
 }
+
+.date__month {
+    display: flex;
+    justify-content: center;
+    /*flex-flow: column wrap;*/
+}
+
+.date__description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.separator {
+    padding-top: 30px;
+}
+
+.schools {
+    /*font-size: 42px;*/
+    text-align: center;
+}
+/*.firstCity {*/
+    /*order: 1;*/
+    /*flex-grow: 4;*/
+/*}*/
