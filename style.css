@@ -227,11 +227,104 @@
     padding-top: 30px;
 }
 
-.schools {
+.schools__body {
     /*font-size: 42px;*/
-    text-align: center;
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+    /*justify-content: space-between;*/
+    max-width: 1200px;
+    margin: 0px auto;
+
 }
-/*.firstCity {*/
-    /*order: 1;*/
-    /*flex-grow: 4;*/
-/*}*/
+ .schools__header {
+     font-size: 42px;
+     text-align: center;
+     margin: 30px 0 60px 0;
+ }
+
+ .schools__row {
+     display: flex;
+     flex-flow: row wrap;
+     align-items: flex-start;
+     justify-content: space-evenly;
+     /*center*/
+ }
+
+ .schools__column {
+    display: flex;
+     /*flex-flow: column wrap;*/
+    justify-content: center;
+    flex: 0 0 35%;
+
+ }
+
+.item-schools__item {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ .item-schools__icon {
+     /*display: flex;*/
+     /*justify-content: center;*/
+     height: 120px;
+     width: 120px;
+ }
+
+.item-schools__city {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding-top: 10px;
+ }
+
+.item-schools__title {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.item-schools__text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 16px;
+    color: #1F2D32;
+    line-height: 27px;
+    text-decoration: none solid rgb(31,45,50);
+}
+
+.condition {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.ref {
+    padding-right: 5px;
+    color: #0099dd;
+    text-decoration: none;
+}
+
+.ref:hover {
+    /*border-bottom: 2px solid #0099dd;*/
+    text-decoration: underline;
+    color: #0099dd;
+    cursor: pointer
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*не работает*/
+.footer__social-icons {
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    color: #006491;
+}
