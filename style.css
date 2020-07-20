@@ -88,7 +88,7 @@
 }
 
 .register {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
     padding: 12px 24px 12px 24px;
@@ -97,15 +97,14 @@
     /*border: 2px solid transparent;*/
     /*box-sizing: border-box;*/
 }
-
+ 
+/* заменить на box-shadow ------ убрал line-height и помогло*/
 .register:hover{
     border: 2px solid #C1D82F;
-    line-height: 30px;
+    /* line-height: 35px; */
     color: #C1D82F;
     cursor: pointer
 }
-
-/*ховер двигает нижний элемент*/
 
 .recommendation__box {
     display: flex;
@@ -171,17 +170,6 @@
 
 }
 
-.date__box__colored {
-    display: flex;
-    flex-flow: row wrap;
-    height: 100px;
-    width: 46%;
-    background-color: rgb(247, 238, 118);
-    justify-content: space-evenly;
-/*rgb(255, 255, 219)*/
-
-}
-
 .date__box {
     display: flex;
     flex-flow: row wrap;
@@ -189,6 +177,17 @@
     width: 46%;
     justify-content: space-around;
     /*width: 375px;*/
+
+}
+ 
+.date__box_colored {
+    /* display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    width: 46%;  */
+    background-color: rgb(247, 238, 118);
+    /* justify-content: space-evenly; */
+/*rgb(255, 255, 219)*/
 
 }
 
@@ -316,10 +315,20 @@
     cursor: pointer
 }
 
+.footer_separator {
+    /* padding-top: 30px; */
+    max-width: 1200px;
+    margin-top: 140px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto;
 }
+
+
 
 /*не работает*/
 .footer__social-icons {
@@ -327,4 +336,26 @@
     width: 32px;
     background-color: white;
     color: #006491;
+}
+
+.animation_one {
+
+}
+
+.animation_two {
+    animation: bounce_left 2s linear;
+    /*animation-duration: 2s;*/
+    /*animation-name: bounce_left;*/
+}
+
+@keyframes bounce_left {
+    40% {
+        left: 50%;
+        bottom: 75%;
+        animation-timing-function: ease-in;
+    }
+    80% {
+        left: 90%;
+        bottom: -10em;
+    }
 }

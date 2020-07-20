@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Ecleziaste/intern.thumbtack#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
   }
 }
