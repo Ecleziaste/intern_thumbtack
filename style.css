@@ -7,7 +7,6 @@
     font-style: normal;
 }
 
-
 .page{
     font-family: 'PFSquareSansProRegular';
 }
@@ -20,17 +19,12 @@
     text-decoration: none solid rgb(255, 255, 255);
 }
 
-/*.header{*/
-    /*font-family: 'PFSquareSansProRegular';*/
-/*}*/
-
 .logo{
     position: static;
     float: left;
     height: 54px;
     width: 171px;
     background-color: black;
-    /*background-image: src="images/logo_new.png" ;*/
 }
 
 .logo:hover {
@@ -47,13 +41,7 @@
     text-align: right;
     text-decoration: none solid rgb(193, 216, 47);
     display: flex;
-    /*flex-flow: row wrap;*/
     justify-content: space-between;
-    /*justify-content: space-between;*/
-    /*align-content: space-between;*/
-    /*font-family: 'PFSquareSansProRegular';*/
-
-    /*box-sizing: border-box;*/
 }
 
 .list {
@@ -69,7 +57,6 @@
 .mainTitle {
     padding: 80px 15px 0 15px;
     box-sizing: border-box;
-    /*font: src="fonts/PFSquareSansProRegular.ttf" ;*/
 }
 
 .firstTitle {
@@ -82,7 +69,6 @@
 }
 
 .thirdTitle {
-    /*margin-bottom: 68px;*/
     margin-bottom: 48px;
     line-height: 30px;
 }
@@ -94,11 +80,8 @@
     padding: 12px 24px 12px 24px;
     margin-bottom: 4px;
     height: 40px;
-    /*border: 2px solid transparent;*/
-    /*box-sizing: border-box;*/
 }
  
-/* заменить на box-shadow ------ убрал line-height и помогло*/
 .register:hover{
     border: 2px solid #C1D82F;
     /* line-height: 35px; */
@@ -114,23 +97,15 @@
 }
 
 .recommendation__text {
-    line-height: 22px;
+    /* line-height: 22px; */
     font-size: 20px;
-    /*margin: 55px 0 10px 0;*/
-    /*position: absolute;*/
-    /*text-align: center;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
 }
 
 .description {
     text-align: center;
     line-height: 27px;
     font-size:16px;
-    padding-top: 64px;
+    padding: 90px 0 40px 0;
 }
 
 .description__header {
@@ -144,25 +119,20 @@
     /*justify-content: center;*/
 
 .city__header {
-     /*text-align: center;*/
      display: flex;
      flex-flow: row wrap;
      justify-content: center;
      font-size: 25px;
-
  }
 
 .city__wrapper{
     display: flex;
     justify-content: center;
-    /*justify-content: space-evenly;*/
     flex-flow: row wrap;
-
 }
 
-
 .date {
-    padding-top: 30px;
+    padding-top: 40px;
     width: 50%;
     display: flex;
     flex-flow: row wrap;
@@ -175,46 +145,36 @@
     flex-flow: row wrap;
     height: 100px;
     width: 46%;
-    justify-content: space-around;
-    /*width: 375px;*/
-
+    justify-content: flex-start;
+    padding-left: 15px;
 }
  
 .date__box_colored {
-    /* display: flex;
-    flex-flow: row wrap;
-    height: 100px;
-    width: 46%;  */
     background-color: rgb(247, 238, 118);
-    /* justify-content: space-evenly; */
-/*rgb(255, 255, 219)*/
-
 }
-
+ 
+/* как лучше совместить margin в одну строчку? */
 .date__icon {
     display: flex;
     width: 70px;
     height: 70px;
     justify-content: space-evenly;
     margin: auto 0;
+    margin-right: 20px;
     flex-flow: column wrap;
-    /*padding: .35em;*/
     border: 2px solid #e74c3c;
     border-radius: 6px;
-
 }
 
 .date__number {
     display: flex;
     justify-content: center;
     font-size: 24px;
-    /*flex-flow: column wrap;*/
 }
 
 .date__month {
     display: flex;
     justify-content: center;
-    /*flex-flow: column wrap;*/
 }
 
 .date__description {
@@ -223,22 +183,18 @@
 }
 
 .separator {
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 .schools__body {
-    /*font-size: 42px;*/
-    /*display: flex;*/
-    /*flex-flow: row wrap;*/
-    /*justify-content: space-between;*/
     max-width: 1200px;
     margin: 0px auto;
-
 }
+
  .schools__header {
      font-size: 42px;
      text-align: center;
-     margin: 30px 0 60px 0;
+     
  }
 
  .schools__row {
@@ -246,15 +202,13 @@
      flex-flow: row wrap;
      align-items: flex-start;
      justify-content: space-evenly;
-     /*center*/
  }
 
  .schools__column {
     display: flex;
-     /*flex-flow: column wrap;*/
     justify-content: center;
-    flex: 0 0 35%;
-
+    flex: 0 0 39%;
+    /* margin: 30px 0 60px 0; */
  }
 
 .item-schools__item {
@@ -262,11 +216,10 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    /* width: 500px; */
 }
 
  .item-schools__icon {
-     /*display: flex;*/
-     /*justify-content: center;*/
      height: 120px;
      width: 120px;
  }
@@ -289,6 +242,7 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    text-align: justify;
     padding-top: 10px;
     font-size: 16px;
     color: #1F2D32;
@@ -309,14 +263,12 @@
 }
 
 .ref:hover {
-    /*border-bottom: 2px solid #0099dd;*/
     text-decoration: underline;
     color: #0099dd;
     cursor: pointer
 }
 
 .footer_separator {
-    /* padding-top: 30px; */
     max-width: 1200px;
     margin-top: 140px;
 }
@@ -328,9 +280,6 @@
     margin: 30px auto;
 }
 
-
-
-/*не работает*/
 .footer__social-icons {
     height: 32px;
     width: 32px;
@@ -338,24 +287,34 @@
     color: #006491;
 }
 
-.animation_one {
 
+/* доделать как в примере через animation-play-state????*/
+.animated_column_one {
+    animation: left_to_right 2s ease-in 1 normal 0s forwards;
+    position: relative;
 }
 
-.animation_two {
-    animation: bounce_left 2s linear;
-    /*animation-duration: 2s;*/
-    /*animation-name: bounce_left;*/
-}
-
-@keyframes bounce_left {
-    40% {
-        left: 50%;
-        bottom: 75%;
-        animation-timing-function: ease-in;
+@keyframes left_to_right {
+    0%{
+        left: -999px;
     }
-    80% {
-        left: 90%;
-        bottom: -10em;
+    100%{
+        left: 0;
     }
+       
+    }
+
+.animated_column_two {
+    animation: right_to_left 2s ease-in 1 normal 0s forwards;
+    position: relative;
 }
+
+@keyframes right_to_left {
+    0%{
+        right: -999px;
+    }
+    100%{
+        right: 0;
+    }
+    
+    }
