@@ -290,7 +290,22 @@
 
 /* доделать как в примере через animation-play-state????*/
 .animated_column_one {
-    animation: left_to_right 2s ease-in 1 normal 0s forwards;
+    /* visibility: initial; */
+
+    animation-name: left_to_right;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: initial;
+    
+    /* animation это короткая запись для animation-name, animation-duration, animation-timing-function, animation-delay,
+    animation-iteration-count, animation-direction, animation-fill-mode и animation-play-state. */
+
+    /* animation: left_to_right 1s linear 1 normal 0s forwards; */
+    
     position: relative;
 }
 
@@ -298,20 +313,32 @@
     0%{
         left: -999px;
     }
+    80%{
+        left: 0;
+    }
+    90%{
+        left: -60px;
+    }
     100%{
         left: 0;
     }
-       
     }
 
 .animated_column_two {
-    animation: right_to_left 2s ease-in 1 normal 0s forwards;
+    /* visibility: unset; */
+    animation: right_to_left 1s linear 1 normal 0s forwards;
     position: relative;
 }
 
 @keyframes right_to_left {
     0%{
         right: -999px;
+    }
+    80%{
+        right: 0;
+    }
+    90%{
+        right: -60px;
     }
     100%{
         right: 0;
