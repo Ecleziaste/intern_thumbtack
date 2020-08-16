@@ -3,20 +3,39 @@
     font-family: 'PFSquareSansProRegular';
     src: url('./fonts/PFSquareSansProRegular.eot');
     src: local('☺'), url('fonts/PFSquareSansProRegular.woff') format('woff'), url('fonts/PFSquareSansProRegular.ttf') format('truetype'), url('fonts/PFSquareSansProRegular.svg') format('svg');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 }
 
 .page{
     font-family: 'PFSquareSansProRegular';
+    font-weight: 100;
 }
+
+/* как убрать отступы(белая рамка) */
+
+.main__wrapper{
+     background-image: url('./images/background.jpg');
+     background-size: 100%;
+}
+
+/*не удаётся воспользоваться font-weight
+похоже, нужно менять шрифт в @font-face
+*/
+
 .main{
-    height: 604px;
+    height: 600px;
     width: 100%;
-    font-family: 'PFSquareSansProRegular';
+    /* font-family: 'PFSquareSansProRegular'; */
+    /* font-weight: 100; */
+    /* letter-spacing: 1px; */
+    color: white;
+    font-size: 18px;
     text-align: center;
-    font-weight: 500;
-    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: 1px 1px 6px black, -1px -1px 6px black;
+    /* text-decoration: none solid rgb(0, 0, 0); */
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 
 .logo{
@@ -24,7 +43,7 @@
     float: left;
     height: 54px;
     width: 171px;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .logo:hover {
@@ -76,9 +95,9 @@
 .register {
     font-size: 26px;
     font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 6px black, -1px -1px 6px black;;
     padding: 12px 24px 12px 24px;
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
     height: 40px;
 }
  
@@ -106,6 +125,7 @@
     line-height: 27px;
     font-size:16px;
     padding: 90px 0 40px 0;
+   
 }
 
 .description__header {
@@ -287,8 +307,6 @@
     color: #006491;
 }
 
-
-/* доделать как в примере через animation-play-state????*/
 .animated_column_one {
     /* visibility: initial; */
 
