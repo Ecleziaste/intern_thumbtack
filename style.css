@@ -8,14 +8,17 @@
 }
 
 .page{
-    font-family: 'PFSquareSansProRegular';
+    font-family: 'PFSquareSansProRegular', sans-serif;
     font-weight: 100;
+    /* letter-spacing: 0.02em; */
+    letter-spacing: 0.5px;
+    padding: 0;
+    margin: 0;
 }
 
-/* как убрать отступы(белая рамка) */
 
 .main__wrapper{
-     background-image: url('./images/background.jpg');
+     background: url('./images/background.jpg') no-repeat center top / cover;
      background-size: 100%;
 }
 
@@ -28,9 +31,9 @@
     width: 100%;
     /* font-family: 'PFSquareSansProRegular'; */
     /* font-weight: 100; */
-    /* letter-spacing: 1px; */
     color: white;
     font-size: 18px;
+    letter-spacing: 1px;
     text-align: center;
     text-shadow: 1px 1px 6px black, -1px -1px 6px black;
     /* text-decoration: none solid rgb(0, 0, 0); */
@@ -43,6 +46,7 @@
     float: left;
     height: 54px;
     width: 171px;
+    margin-left: 20px;
     /* background-color: black; */
 }
 
@@ -52,21 +56,28 @@
 
 .navigate{
     height:40x;
-    width: 320px;
+    width: 360px;
     float: right;
     font-size: 18px;
     line-height: 27px;
-    margin: 9px 9px 0 0;
+    margin: 10px 18px 0 0;
     text-align: right;
     text-decoration: none solid rgb(193, 216, 47);
     display: flex;
     justify-content: space-between;
 }
 
-.list {
-    margin:0 18px 0 0;
+/* .list {
+    margin: 10px 18px 0 0;
+} */
+
+.aim {
+    text-decoration: none;
 }
 
+.aim:visited{
+    color: #fff;
+}
 .aim:hover {
     border-bottom: 2px solid #C1D82F;
     color: #C1D82F;
@@ -125,7 +136,6 @@
     line-height: 27px;
     font-size:16px;
     padding: 90px 0 40px 0;
-   
 }
 
 .description__header {
@@ -157,7 +167,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-
 }
 
 .date__box {
@@ -214,7 +223,6 @@
  .schools__header {
      font-size: 42px;
      text-align: center;
-     
  }
 
  .schools__row {
@@ -290,7 +298,11 @@
 
 .footer_separator {
     max-width: 1200px;
-    margin-top: 140px;
+    margin-top: 90px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .footer {
@@ -318,6 +330,9 @@
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: initial;
+    /* animation-play-state: paused; 
+    СДЕЛАТЬ animation-play-state С ПОМОЩЬЮ JS из состояния paused в running, когда элемент попадает во вьюпорт
+    */
     
     /* animation это короткая запись для animation-name, animation-duration, animation-timing-function, animation-delay,
     animation-iteration-count, animation-direction, animation-fill-mode и animation-play-state. */
@@ -362,4 +377,76 @@
         right: 0;
     }
     
+    }
+
+    .logo_2 {
+        margin-left: 15px;
+    }
+
+    .page_wrapper {
+        /* display: flex; */
+        /* flex-flow: column wrap; */
+        letter-spacing: 0.5px ;
+        padding: 10px 10px 10px 10px;
+        justify-content: center;
+        margin: 0 auto;
+        /* border: 10px solid greenyellow ; */
+        align-items: center;
+        max-width: 1200px;
+    }
+
+    .page_title {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    .page_description {
+        font-size: 24px;
+        font-weight: 200;
+        margin: 10px 0 20px 0;
+    }
+
+    .page_qa {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    
+    .page_image {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        /* margin: 0 auto; */
+        height: 880px;
+        width: 1200px;
+        max-width: 100%;
+        /* background-size: cover;
+	    background-position: center; */
+    }
+
+    .faq__question {
+        display: flex;
+        margin: 20px 0 15px 0;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .faq__answer {
+        display: flex;
+        padding: 10px 0 10px 15px;
+        margin-bottom: 20px;
+        border-left: 5px solid #EEEEEE;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    .beautiful_hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
     }
