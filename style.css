@@ -10,6 +10,8 @@
 .page{
     font-family: 'PFSquareSansProRegular', sans-serif;
     font-weight: 100;
+    /* max-width: 100%; */
+    /* display: flex; - Всё летит. А надо ли основной класс делать флекс?  */
     /* letter-spacing: 0.02em; */
     letter-spacing: 0.5px;
     padding: 0;
@@ -22,13 +24,10 @@
      background-size: 100%;
 }
 
-/*не удаётся воспользоваться font-weight
-похоже, нужно менять шрифт в @font-face
-*/
-
-.main{
-    height: 600px;
-    width: 100%;
+.main{ 
+    /* display: flex; */
+    /* height: 600px; */
+    max-width: 100%;
     /* font-family: 'PFSquareSansProRegular'; */
     /* font-weight: 100; */
     color: white;
@@ -36,7 +35,6 @@
     letter-spacing: 1px;
     text-align: center;
     text-shadow: 1px 1px 6px black, -1px -1px 6px black;
-    /* text-decoration: none solid rgb(0, 0, 0); */
     padding-top: 10px;
     padding-bottom: 40px;
 }
@@ -297,6 +295,7 @@
 }
 
 .footer_separator {
+    display: flex;
     max-width: 1200px;
     margin-top: 90px;
     border: 0;
@@ -321,7 +320,7 @@
 
 .animated_column_one {
     /* visibility: initial; */
-
+    position: relative;
     animation-name: left_to_right;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -336,10 +335,9 @@
     
     /* animation это короткая запись для animation-name, animation-duration, animation-timing-function, animation-delay,
     animation-iteration-count, animation-direction, animation-fill-mode и animation-play-state. */
-
     /* animation: left_to_right 1s linear 1 normal 0s forwards; */
     
-    position: relative;
+    
 }
 
 @keyframes left_to_right {
@@ -379,74 +377,97 @@
     
     }
 
-    .logo_2 {
-        margin-left: 15px;
-    }
+.logo_2 {
+    margin-left: 15px;
+}
 
+.page_wrapper {
+    /* display: flex;
+    flex-flow: column wrap;
+    justify-content: center; */
+
+/* при флексе пропадает beautiful hr или где-то криво отображается,
+ адаптивности становится подвержена только шапка и футер */
+
+    /* align-items: center; */
+    letter-spacing: 0.5px ;
+    padding: 10px 10px 10px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 10px solid greenyellow ; */
+}
+
+@media (max-width:1200px) {
     .page_wrapper {
-        /* display: flex; */
-        /* flex-flow: column wrap; */
-        letter-spacing: 0.5px ;
-        padding: 10px 10px 10px 10px;
-        justify-content: center;
-        margin: 0 auto;
-        /* border: 10px solid greenyellow ; */
-        align-items: center;
-        max-width: 1200px;
+        max-width: 970px;
     }
+}
 
-    .page_title {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        font-size: 48px;
-        font-weight: 900;
-        margin-bottom: 30px;
+@media (max-width:992px) {
+    .page_wrapper {
+        max-width: 750px;
     }
+}
 
-    .page_description {
-        font-size: 24px;
-        font-weight: 200;
-        margin: 10px 0 20px 0;
+@media (max-width:767px) {
+    .page_wrapper {
+        max-width: none;
     }
+}
 
-    .page_qa {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-    }
-    
-    .page_image {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        /* margin: 0 auto; */
-        height: 880px;
-        width: 1200px;
-        max-width: 100%;
-        /* background-size: cover;
-	    background-position: center; */
-    }
+.page_qa {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
 
-    .faq__question {
-        display: flex;
-        margin: 20px 0 15px 0;
-        font-size: 16px;
-        font-weight: 700;
-    }
+.page_title {
+    display: flex;
+    /* flex-flow: column wrap;
+    justify-content: center; */
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
 
-    .faq__answer {
-        display: flex;
-        padding: 10px 0 10px 15px;
-        margin-bottom: 20px;
-        border-left: 5px solid #EEEEEE;
-        font-size: 18px;
-        font-weight: 100;
-    }
+.page_description {
+    display: flex;
+    /* flex-flow: column wrap;
+    justify-content: center; */
+    font-size: 24px;
+    font-weight: 200;
+    margin: 10px 0 20px 0;
+}
 
-    .beautiful_hr {
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    }
+.page_image {
+    display: flex;
+    /* flex-flow: column wrap;
+    justify-content: center; */
+    /* margin: 0 auto; */
+    max-height: 880px;
+    max-width: 100%;
+}
+
+.faq__question {
+    display: flex;
+    margin: 20px 0 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.faq__answer {
+    display: flex;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #EEEEEE;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.beautiful_hr {
+    display: flex;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
