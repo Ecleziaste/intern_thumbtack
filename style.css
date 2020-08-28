@@ -125,7 +125,8 @@
     /* line-height: 35px; */
     color: #C1D82F;
     cursor: pointer;
-    transition: border-color ease-in-out 0.9s;
+    transition: ease-in-out 0.1s;
+    /*РЕГИСТРАЦИЯ прыгает после добавления transition */
 }
 
 .recommendation__box {
