@@ -18,18 +18,29 @@
     margin: 0;
 }
 
-
-.main__wrapper{
-     background: url('./images/background.jpg') no-repeat center top / cover;
+/* .main__wrapper{
      background-size: 100%;
+     max-width: 100%;
+     margin: 0 auto;
+     padding: 0;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .main{ 
-    /* display: flex; */
-    /* height: 600px; */
-    max-width: 100%;
-    /* font-family: 'PFSquareSansProRegular'; */
-    /* font-weight: 100; */
+    border: 10px solid greenyellow ;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    /* margin: 0 auto; */
+    background: url('./images/background.jpg') no-repeat center top / cover;
+    /* max-width: 100%; */
+    object-fit: fill;
+    /* background-size: 100%; */
     color: white;
     font-size: 18px;
     letter-spacing: 1px;
@@ -82,21 +93,20 @@
     cursor: pointer
 }
 
-.mainTitle {
+.main_title {
     padding: 80px 15px 0 15px;
-    box-sizing: border-box;
 }
 
-.firstTitle {
+.first_title {
     font-size: 64px;
 }
 
-.secondTitle {
+.second_title {
     margin: 50px 0 14px 0;
     line-height: 70px;
 }
 
-.thirdTitle {
+.third_title {
     margin-bottom: 48px;
     line-height: 30px;
 }
@@ -114,7 +124,8 @@
     border: 2px solid #C1D82F;
     /* line-height: 35px; */
     color: #C1D82F;
-    cursor: pointer
+    cursor: pointer;
+    transition: border-color ease-in-out 0.9s;
 }
 
 .recommendation__box {
@@ -130,6 +141,10 @@
 }
 
 .description {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    /* Сделать без text-align, убрать p и br? */
     text-align: center;
     line-height: 27px;
     font-size:16px;
@@ -137,6 +152,8 @@
 }
 
 .description__header {
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     line-height: 26px;
 }
@@ -386,8 +403,8 @@
     flex-flow: column wrap;
     justify-content: center; */
 
-/* при флексе пропадает beautiful hr или где-то криво отображается,
- адаптивности становится подвержена только шапка и футер */
+/* При флексе пропадает beautiful hr или где-то криво отображается,
+ адаптивности становится подвержена только шапка и футер. А надо ли основной класс делать флекс? */
 
     /* align-items: center; */
     letter-spacing: 0.5px ;
@@ -471,3 +488,46 @@
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
+.registration__container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-right: 300px;
+}
+
+.registration__group_forms {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+}
+
+.registration__form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin-bottom: 30px;
+}
+
+.registration__label {
+    margin-bottom: 10px;
+    font: 1em "PFSquareSansPro-Regular",sans-serif;
+    color: #7f7f7f;
+}
+
+.registration__input {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+
+.asterisk {
+    color: red;
+}
+
