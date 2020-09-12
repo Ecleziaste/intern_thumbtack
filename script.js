@@ -1,14 +1,49 @@
 "use strict";
+// let columns = document.querySelector('.schools__row');
+
+// let observer = new IntersectionObserver((entry, observer) => {
+//     console.log('entry:', entry);
+//     console.log('observer:', observer);
+// });
+
+// observer.observe(columns);
 
 
-let columns = document.querySelector('animated_column_one');
 
-let observer = new IntersectionObserver((entry, observer) => {
-    console.log('entry:', entry);
-    console.log('observer:', observer);
+let columns = document.querySelectorAll('.schools__column');
+let animations = document.querySelectorAll('.item-schools__item');
+animations.classList.add('animate');
+// // храним тут наши колонки с анимацией, чтобы далее добавить класс с запуском анимации
+// // можно перебрать циклом в new IntersectionObserver и добавить класс к каждому?
+
+// console.log(columns.classList);
+// console.log(animations.classList);
+// почему выдают undefined??
+
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            console.log('in the view');
+            console.log(animations);
+            animations.classList.add('animate');
+            // КУДА ВСТАВИТЬ, ЧТОБ РАБОТАЛО??
+            // document.querySelectorAll('.item-schools__item').classList.add('.animate');
+
+            // entry.target.style.animation = 'running';
+            observer.unobserve(entry.target);
+        } else {
+            console.log('out of view');
+        }
+    });
 });
 
-observer.observe(columns);
+columns.forEach(column => {
+    observer.observe(column);
+});
+
+// document.querySelectorAll('.item-schools__item').classList.add('.animate');
+
+
 
 
 // // получаем элемент с классом '.schools__row',т.е. с колонками где есть нужная нам анимация этих колонок
@@ -40,7 +75,6 @@ observer.observe(columns);
 
 
 
-
 // let observer = new IntersectionObserver((entries) => {
 //     console.log(entries)
 // });
@@ -59,15 +93,6 @@ observer.observe(columns);
 // columns.forEach(column => {
 //     observer.observe(column)
 // })
-
-
-
-
-
-
-
-
-
 
 
 // //функция-обработчик события принимающая 2 параметра

@@ -253,6 +253,7 @@
  }
 
  .schools__column {
+     /* похоже, при сокрытии этого родительского элемента анимации проигрываются при загрузке сайта вне зависимости от его видимости */
     visibility: visible;
     /* hidden */
     display: flex;
@@ -262,6 +263,7 @@
  }
 
 .item-schools__item {
+    visibility: inherit;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -341,9 +343,9 @@
     background-color: white;
     color: #006491;
 }
-
+/* .animated_column_one.anim */
 .animated_column_one {
-    visibility: visible;
+    /* visibility: inherit; */
     position: relative;
     animation-name: left_to_right;
     animation-duration: 1s;
@@ -352,16 +354,14 @@
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    animation-play-state: inherit;
-    /* animation-play-state: paused; */
-    animation-play-state: running; 
+    /* animation-play-state: inherit; */
+    animation-play-state: paused;
+    /* animation-play-state: running;  */
     /* СДЕЛАТЬ animation-play-state С ПОМОЩЬЮ JS из состояния paused в running, когда элемент попадает во вьюпорт */
    
     /* animation это короткая запись для animation-name, animation-duration, animation-timing-function, animation-delay,
     animation-iteration-count, animation-direction, animation-fill-mode и animation-play-state. */
-    /* animation: left_to_right 1s linear 1 normal 0s forwards; */
-    
-    
+    /* animation: left_to_right 1s linear 1 normal 0s forwards; */ 
 }
 
 @keyframes left_to_right {
@@ -379,8 +379,9 @@
     }
     }
 
+/* .animated_column_two.anim */
 .animated_column_two {
-    visibility: visible;
+    /* visibility: inherit; */
     position: relative;
     animation-name: right_to_left;
     animation-duration: 1s;
@@ -389,7 +390,9 @@
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    animation-play-state: running;
+    animation-play-state: paused;
+    /* animation-play-state: running; */
+
     /* animation: right_to_left 1s linear 1 normal 0s forwards;
     position: relative; */
 }
@@ -409,6 +412,10 @@
     }
     
     }
+
+.animate {
+    animation-play-state: running;
+}
 
 .logo_2 {
     margin-left: 15px;
