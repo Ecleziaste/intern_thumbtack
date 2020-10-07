@@ -21,6 +21,8 @@ let observer = new IntersectionObserver(entries => {
     });
 });
 
+// observer.observe(column);
+
 columns.forEach(column => {
     observer.observe(column);
 });
