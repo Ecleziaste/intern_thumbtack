@@ -7,7 +7,7 @@
     font-style: normal;
 }
 
-.page{
+.page {
     font-family: 'PFSquareSansProRegular', sans-serif;
     font-weight: 100;
     /* max-width: 100%; */
@@ -30,9 +30,9 @@
     justify-content: space-between;
 }
 
-.main{ 
+.main { 
     border: 10px solid rgb(193, 216, 47) ;
-
+    overflow: hidden;
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
@@ -50,7 +50,7 @@
     padding-bottom: 40px;
 }
 
-.logo{
+.logo {
     position: static;
     float: left;
     height: 54px;
@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 
-.navigate{
+.navigate {
     text-decoration: none solid rgb(193, 216, 47);
     height:40x;
     width: 360px;
@@ -86,9 +86,11 @@
 }
 
 .aim:visited{
+    text-decoration: none;
     color: #fff;
 }
 .aim:hover {
+    text-decoration: none;
     border-bottom: 2px solid #C1D82F;
     color: #C1D82F;
     cursor: pointer
@@ -124,7 +126,7 @@
     height: 40px;
 }
  
-.register:hover{
+.register:hover {
     border: 2px solid #C1D82F;
     /* line-height: 35px; */
     color: #C1D82F;
@@ -175,7 +177,7 @@
      font-size: 25px;
  }
 
-.city__wrapper{
+.city__wrapper {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -254,8 +256,7 @@
 
  .schools__column {
      /* похоже, при сокрытии этого родительского элемента анимации проигрываются при загрузке сайта вне зависимости от его видимости */
-    visibility: visible;
-    /* hidden */
+    /* visibility: visible; */
     display: flex;
     justify-content: center;
     flex: 0 0 39%;
@@ -364,6 +365,8 @@
     /* animation: left_to_right 1s linear 1 normal 0s forwards; */ 
 }
 
+
+/* TODO: через transform: translateX(-10000px); */
 @keyframes left_to_right {
     0%{
         left: -999px;
@@ -397,6 +400,7 @@
     position: relative; */
 }
 
+/* TODO: через transform: translateX(-10000px); */
 @keyframes right_to_left {
     0%{
         right: -999px;
